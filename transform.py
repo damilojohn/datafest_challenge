@@ -51,7 +51,7 @@ try:
     for query in transformation_queries:
         curr.execute(query)
         conn.commit()
-        print(f'Transformation executed successfully.')
+        print('Transformation executed successfully.')
 except Exception as e:
     print(f'Error as {e}')
 finally:

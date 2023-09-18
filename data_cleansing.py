@@ -38,7 +38,7 @@ try:
         columns = [row[0] for row in curr.fetchall()]
         # construct dynamic sql query to remove all null rows from every table 
         cleansing_query = f'''
-        DELETE FROM {staging_table} WHERE {' OR '.join([f"{column} IS NULL" 
+        DELETE FROM {staging_table} WHERE {' OR '.join([f"{column} IS NULL"
         for column in columns])};
         '''
         curr.execute(cleansing_query)
